@@ -1,0 +1,11 @@
+if quote == base:
+       raise ConvertionException(f'Не удалось перевести одинаковые валюты {base}.')
+       try:
+        quoter_ticker = keys[quote]
+    except KeyError:
+        raise ConvertionException(f'Не удалось обработать валюту {quote}')
+
+    try:
+        quoter_ticker = keys[base]
+    except KeyError:
+        raise ConvertionException(f'Не удалось обработать валюту {base}')
